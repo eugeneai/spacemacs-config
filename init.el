@@ -48,7 +48,7 @@ values."
      python
      (python :variables
              python-test-runner 'nose
-             python-enable-yapf-format-on-save t)
+             python-enable-yapf-format-on-save nil)
      ;; colors
      ;; (colors :variables colors-enable-rainbow-identifiers t)
      ;; themes-megapack
@@ -127,7 +127,7 @@ values."
    ;; unchanged. (default 'vim)
    dotspacemacs-editing-style 'emacs
    ;; If non nil output loading progress in `*Messages*' buffer. (default nil)
-   dotspacemacs-verbose-loading nil
+   dotspacemacs-verbose-loading t
    ;; Specify the startup banner. Default value is `official', it displays
    ;; the official spacemacs logo. An integer value is the index of text
    ;; banner, `random' chooses a random text banner in `core/banners'
@@ -193,7 +193,7 @@ values."
    dotspacemacs-default-layout-name "Default"
    ;; If non nil the default layout name is displayed in the mode-line.
    ;; (default nil)
-   dotspacemacs-display-default-layout nil
+   dotspacemacs-display-default-layout t
    ;; If non nil then the last auto saved layouts are resume automatically upon
    ;; start. (default nil)
    dotspacemacs-auto-resume-layouts nil
@@ -203,7 +203,7 @@ values."
    ;; (default 'cache)
    dotspacemacs-auto-save-file-location 'cache
    ;; Maximum number of rollback slots to keep in the cache. (default 5)
-   dotspacemacs-max-rollback-slots 5
+   dotspacemacs-max-rollback-slots 20
    ;; If non nil then `ido' replaces `helm' for some commands. For now only
    ;; `find-files' (SPC f f), `find-spacemacs-file' (SPC f e s), and
    ;; `find-contrib-file' (SPC f e c) are replaced. (default nil)
@@ -261,11 +261,11 @@ values."
    dotspacemacs-line-numbers nil
    ;; If non-nil smartparens-strict-mode will be enabled in programming modes.
    ;; (default nil)
-   dotspacemacs-smartparens-strict-mode t
+   dotspacemacs-smartparens-strict-mode nil
    ;; Select a scope to highlight delimiters. Possible values are `any',
    ;; `current', `all' or `nil'. Default is `all' (highlight any scope and
    ;; emphasis the current one). (default 'all)
-   dotspacemacs-highlight-delimiters 'all
+   dotspacemacs-highlight-delimiters 'current
    ;; If non nil advises quit functions to keep server open when quitting.
    ;; (default nil)
    dotspacemacs-persistent-server nil
@@ -293,6 +293,7 @@ executes.
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   ;(setq-default dotspacemacs-themes '(eugeneai-test))
+  (setq powerline-default-separator 'utf-8)
   )
 
 (defun dotspacemacs/user-config ()
@@ -302,7 +303,6 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (setq powerline-default-separator nil)
   (add-hook 'after-init-hook 'global-company-mode)
   (require 'yasnippet)
   (setq yas-snippet-dirs (append yas-snippet-dirs
@@ -360,7 +360,8 @@ you should place your code here."
  '(fringe-mode 0 nil (fringe))
  '(global-company-mode t)
  '(minibuffer-auto-raise t)
- '(minibuffer-frame-alist (quote ((width . 80) (height . 1)))))
+ '(minibuffer-frame-alist (quote ((width . 80) (height . 1))))
+ '(powerline-default-separator (quote butt)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -375,5 +376,4 @@ you should place your code here."
  '(fringe-mode 0 nil (fringe))
  '(linum ((t (:background "NavajoWhite4" :foreground "gold" :weight bold))))
  '(minibuffer-prompt ((t (:foreground "CadetBlue1"))))
- '(mode-line ((t (:weight normal :height 0.5))))
  '(mode-line-highlight ((t (:background "gold")))))
