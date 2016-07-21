@@ -377,5 +377,5 @@ you should place your code here."
  '(fringe-mode 0 nil (fringe))
  '(linum ((t (:background "NavajoWhite4" :foreground "gold" :weight bold))))
  '(minibuffer-prompt ((t (:foreground "CadetBlue1"))))
- '(mode-line ((t (:weight normal :height 0.5))))
- '(mode-line-highlight ((t (:background "gold")))))
+ '(mode-line ((t (:weight normal :height 0.7))))
+ '(mode-line-highlight ((t (:foreground "gold" :weight bold)))))
