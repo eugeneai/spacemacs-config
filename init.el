@@ -295,6 +295,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   ;(setq-default dotspacemacs-themes '(eugeneai-test))
   (setq powerline-default-separator 'utf-8)
+  (setq paradox-github-token  "fa03a229cda23b78e9682d6cf498b8ee20fca81e")
   )
 
 (defun dotspacemacs/user-config ()
@@ -363,6 +364,8 @@ you should place your code here."
  '(global-company-mode t)
  '(minibuffer-auto-raise t)
  '(minibuffer-frame-alist (quote ((width . 80) (height . 1))))
+ '(paradox-automatically-star t)
+ '(paradox-github-token t)
  '(powerline-default-separator (quote utf-8)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
