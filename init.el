@@ -160,7 +160,7 @@ values."
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '("Ubuntu Mono Regular"      ;"Source Code Pro"
                                :height 130
-                               :weight demibold
+                               ; :weight bold
                                :width normal
                                :powerline-scale 1.1)
    ;; The leader key
@@ -365,14 +365,14 @@ you should place your code here."
  '(minibuffer-auto-raise t)
  '(minibuffer-frame-alist (quote ((width . 80) (height . 1))))
  '(paradox-automatically-star t)
- '(paradox-github-token t)
+ '(paradox-github-token t t)
  '(powerline-default-separator (quote utf-8)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "gray20" :foreground "wheat3" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight semi-bold :height 127 :width normal :family "Source Code Pro" :foundry "ADBO"))))
+ '(default ((t (:inherit nil :stipple nil :background "gray20" :foreground "wheat3" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight bold :height 128 :width normal :family "Ubuntu Mono" :foundry "DAMA"))))
  '(border ((t (:background "orange" :foreground "slate gray"))))
  '(company-echo-common ((t (:foreground "orange"))))
  '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
