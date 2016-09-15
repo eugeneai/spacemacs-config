@@ -389,4 +389,5 @@ you should place your code here."
  '(linum ((t (:background "NavajoWhite4" :foreground "gold" :weight bold))))
  '(minibuffer-prompt ((t (:foreground "CadetBlue1"))))
  '(mode-line ((t (:weight normal :height 0.7 :family "Ubuntu Mono" :height 100))))
+ '(mode-line-inactive ((t (:height 90))))
  '(mode-line-highlight ((t (:foreground "gold" :weight bold)))))
