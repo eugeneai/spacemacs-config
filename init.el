@@ -158,7 +158,7 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Ubuntu Mono Regular"      ;"Source Code Pro"
+   dotspacemacs-default-font '("Source Code Pro" ;"Ubuntu Mono Regular"      ;"Source Code Pro"
                                :height 130
                                ; :weight bold
                                :width normal
@@ -343,13 +343,13 @@ you should place your code here."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(TeX-auto-save t t)
+ '(TeX-auto-save t)
  '(TeX-master nil)
- '(TeX-parse-self t t)
+ '(TeX-parse-self t)
  '(TeX-save-query nil)
  '(TeX-source-correlate-method (quote synctex))
  '(TeX-source-correlate-mode t)
- '(TeX-source-correlate-start-server (quote ask) t)
+ '(TeX-source-correlate-start-server (quote ask))
  '(company-dabbrev-downcase nil)
  '(company-dabbrev-ignore-case nil)
  '(company-idle-delay 0.2)
@@ -366,7 +366,14 @@ you should place your code here."
  '(minibuffer-frame-alist (quote ((width . 80) (height . 1))))
  '(paradox-automatically-star t)
  '(paradox-github-token t t)
- '(powerline-default-separator (quote utf-8)))
+ '(powerline-default-separator (quote utf-8))
+ '(safe-local-variable-values
+   (quote
+    ((TeX-auto-save . t)
+     (TeX-parse-self . t)
+     (TeX-command-extra-options . "-shell-escape")
+     (whitespace-line-column . 80)
+     (lexical-binding . t)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
