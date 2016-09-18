@@ -92,6 +92,7 @@ values."
                                       ace-jump-mode
                                       pyenv-mode-auto
                                       company-jedi
+                                      ag
                                       )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(undo-tree)
@@ -322,10 +323,11 @@ you should place your code here."
 
   ;; (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
   ;; (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
-  ;; (add-hook 'LaTeX-mode-hook 'turn-off-auto-fill)
-  ;; (add-hook 'LaTeX-mode-hook 'turn-on-visual-line-mode)
-  ;; (add-hook 'LaTeX-mode-hook 'turn-on-flyspell)
+  (add-hook 'LaTeX-mode-hook 'turn-off-auto-fill)
+  (add-hook 'LaTeX-mode-hook 'turn-on-visual-line-mode)
+  (add-hook 'LaTeX-mode-hook 'turn-on-flyspell)
 
+  (add-hook 'python-mode-hook 'jedi-mode)
   ;; (setq reftex-plug-into-AUCTeX t)
 
   ;; (setq curchg-default-cursor-color "LightSkyBlue1")
