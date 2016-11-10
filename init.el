@@ -336,7 +336,7 @@ you should place your code here."
   (add-hook 'LaTeX-mode-hook 'turn-on-visual-line-mode)
   (add-hook 'LaTeX-mode-hook 'turn-on-flyspell)
 
-  (add-hook 'python-mode-hook 'jedi-mode)
+  ;(add-hook 'python-mode-hook 'jedi-mode)
   ;; (setq reftex-plug-into-AUCTeX t)
 
   ;; (setq curchg-default-cursor-color "LightSkyBlue1")
