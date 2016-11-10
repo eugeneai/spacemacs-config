@@ -305,6 +305,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (setq paradox-github-token  "fa03a229cda23b78e9682d6cf498b8ee20fca81e")
   (setq dotfiles-dir-my (expand-file-name "~/.emacs.d/"))
   (setq custom-file (expand-file-name ".spacemacs.d/custom.el" dotfiles-dir-my))
+  (setq python-shell--interpreter "python")
+  (setq python-shell--interpreter-args "-u -i")
   (load custom-file)
   )
 
