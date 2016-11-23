@@ -324,8 +324,9 @@ you should place your code here."
                                  '("~/.emacs.d/snippets")))
   (yas-reload-all)
   (yas-global-mode 1)
-  (add-to-list 'company-backends 'company-jedi)
+  ;;(add-to-list 'company-backends 'company-jedi)
   (global-set-key (kbd "M-p") 'mark-paragraph)
+
   ;; (setq-default dotspacemacs-themes '(oldlace))
   ;;'(custom-enabled-themes (quote (eugeneai-theme)))
   ;; (add-hook 'after-init-hook 'global-company-mode)
@@ -334,9 +335,11 @@ you should place your code here."
 
   ;; (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
   ;; (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
+
   (add-hook 'LaTeX-mode-hook 'turn-off-auto-fill)
-  (add-hook 'LaTeX-mode-hook 'turn-on-visual-line-mode)
+  ;; (add-hook 'LaTeX-mode-hook 'turn-on-visual-line-mode)
   (add-hook 'LaTeX-mode-hook 'turn-on-flyspell)
+  (add-hook 'after-init-hook 'turn-on-flyspell)
 
   ;(add-hook 'python-mode-hook 'jedi-mode)
   ;; (setq reftex-plug-into-AUCTeX t)
