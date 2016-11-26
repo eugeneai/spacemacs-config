@@ -93,6 +93,7 @@ values."
                                       pyenv-mode-auto
                                       ; company-jedi
                                       ag
+                                      ; wcheck-mode
                                       )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(
@@ -338,8 +339,8 @@ you should place your code here."
 
   (add-hook 'LaTeX-mode-hook 'turn-off-auto-fill)
   ;; (add-hook 'LaTeX-mode-hook 'turn-on-visual-line-mode)
-  (add-hook 'LaTeX-mode-hook 'turn-on-flyspell)
-  (add-hook 'after-init-hook 'turn-on-flyspell)
+  ;(add-hook 'LaTeX-mode-hook 'turn-on-flyspell)
+  ;(add-hook 'after-init-hook 'turn-on-flyspell)
 
   ;(add-hook 'python-mode-hook 'jedi-mode)
   ;; (setq reftex-plug-into-AUCTeX t)

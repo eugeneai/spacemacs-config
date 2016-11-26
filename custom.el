@@ -10,6 +10,7 @@
  '(TeX-source-correlate-method (quote synctex))
  '(TeX-source-correlate-mode t)
  '(TeX-source-correlate-start-server (quote ask))
+ '(default-input-method "russian-computer")
  '(evil-want-Y-yank-to-eol t)
  '(package-selected-packages
    (quote
