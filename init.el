@@ -105,6 +105,7 @@ values."
                                     jedi
                                     company-jedi
                                     linum
+                                    company
                                     )
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
@@ -319,7 +320,8 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setq powerline-default-separator nil)
-  (add-hook 'after-init-hook 'global-company-mode)
+  ;(add-hook 'after-init-hook 'global-company-mode)
+  (add-hook 'after-init-hook 'global-auto-complete-mode)
   (require 'yasnippet)
   (setq yas-snippet-dirs (append yas-snippet-dirs
                                  '("~/.emacs.d/snippets")))
@@ -351,6 +353,8 @@ you should place your code here."
   ;; (change-cursor-mode 1) ; On for overwrite/read-only/input mode
   ;; (toggle-cursor-type-when-idle 1) ; On when idle
   ;; (message "------> Run already")
+  (setq font-latex-fontify-script nil
+        font-latex-fontify-sectioning 'color)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
